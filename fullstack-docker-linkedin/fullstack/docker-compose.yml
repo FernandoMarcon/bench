@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongo
   mongo:
-    image: mongo
+    image: mongogit
     container_name: mongo
     ports:
       - "27017:27017"
