@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matplotlib with PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <py-en>
+        - matplotlib
+    </py-en>
+
+</head>
+<body>
+    <strong>Matplotlib Output:</strong>
+    <div id="plot"></div>
+    
+    <py-script output="plot">
+        import matplotlib
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        # Data for plotting
+        t = np.arrange(0.0, 2.0, 0.01)
+        s = 1 + np.sin(2 * np.pi * t)
+
+        fig, ax = plt.subplots()
+        ax.plot(t,s)
+
+        ax.set(xlabel='time (s)', ylabel='voltage (mV)', title='Subscribe to 1littlecoder')
+        ax.grid()
+        fig
+    </py-script>
+</body>
+</html>

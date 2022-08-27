@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <py-env>
+        - neo4j
+    </py-env>
+</head>
+<body>
+    
+    <py-script>
+        from neo4j import GraphDatabase
+        uri="neo4j://localhost:7687"
+        # uri="neo4j://localhost:7474"
+        user='neo4j'
+        pwd='csbl'
+        driver = GraphDatabase.driver(uri,auth=(user,pwd))
+
+        with driver.session() as session:
+            result = session.run("MATCH (n:Gene)-[r:DEG]->(c:Comparison) WHERE c.id = "D1"  RETURN g, r, c")
+            result = [res for res in result]
+
+        print(result)
+            
+    </py-script>
+</body>
+</html>

@@ -13,30 +13,17 @@
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
+    <py-env>
+        - pandas
+
+    </py-env>
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-8 mx-auto mt-5 text-center">
-                <button class="btn btn-success" id="button">Go!</button>
-                <button class="btn btn-danger" id="red-button">Get Number!</button>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row mx-auto text-center justify-content-center mt-5">
-        <div class="col-4">
-            GET
-            <ul id="left"></ul>
-        </div>
-        <div class="col-4" id="right">
-            POST
-            <ul id="right"></ul>
-        </div>
-    </div>
     
-    <py-script src="./static/script.py"></py-script>
+<div id="deg">{{data}}</div>
+<div id="output"></div>
+
+
 </body>
 </html>
