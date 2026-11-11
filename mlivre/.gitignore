@@ -1,0 +1,7 @@
+.venv/
+.browser-profile/
+__pycache__/
+out/
+meli_search.sh
+mlivre.egg-info/
+mcp-mercado-livre/
